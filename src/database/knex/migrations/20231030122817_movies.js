@@ -8,6 +8,7 @@ exports.up = knex => knex.schema.createTable("movies", table => {
   table.text("release_date")
   table.text("running_time").notNullable()
   table.text("rt_score")
+  table.text("image")
 })
 
 exports.down = knex => knex.schema.dropTable("movies")
