@@ -11,7 +11,8 @@ class MovieController {
       producer,
       release_date,
       running_time,
-      rt_score
+      rt_score,
+      image
     } = request.body
 
     const movieExist = await knex("movies").where({title}).first()
@@ -28,7 +29,8 @@ class MovieController {
       producer,
       release_date,
       running_time,
-      rt_score
+      rt_score,
+      image
     })
 
     return response.json()
